@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="992px" height="109px" viewBox="0 0 992 109" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>XMLID_114_</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-1.2%" y="-1.7%" width="102.3%" height="103.3%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.568627451   0 0 0 0 0.490196078   0 0 0 0 0.517647059  0 0 0 1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-16.000000, -344.000000)" fill="#DDBEAA" fill-rule="nonzero">
+            <g id="FORTUNE-TELLER1" filter="url(#filter-1)">
+                <path d="M465.846857,413.184 C502.272,379.904 722.358857,418.596571 792.356571,413.184 C862.354286,407.771429 841.581714,396.873143 896.585143,364.105143 C932.571429,342.674286 977.188571,344.941714 1003.66629,349.037714 L1003.66629,446.464 L20.6994286,446.464 L20.6994286,421.888 C110.445714,426.642286 434.468571,441.856 465.846857,413.184 Z" id="XMLID_114_"></path>
+            </g>
+        </g>
+    </g>
+</svg>

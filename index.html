@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/main.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Madame Mahala - mind reader game</title>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <div id="bubble" v-if="this.step < 11 || this.playagain">
+                <div>
+                    <div v-html="message"></div>
+                    <div v-if="step === 9">
+                        <form action="#" @submit.prevent="if(this.a){ next(); }">
+                            <input v-model="input" autofocus />
+                            <input type="submit" style="display: none;">
+                        </form>
+                    </div>
+                    <div class="cta-container" v-if="this.step !== 10">
+                        <span class="cta-back" @click="prev()" v-if="this.step > 1 && this.step !== 11">{{ prev_text }}</span>
+                        <span class="cta-next" @click="next()" v-if="this.step !== 9 || this.a">{{ next_text }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="madame-container">
+                <img src="assets/lady.svg" alt="" id="madame">
+                <img src="assets/crystalball.svg" alt="" id="crystalball" :class="{ 'shaking': this.step===10 }">
+                <img src="assets/smoke1.svg" alt="" id="smoke1">
+                <img src="assets/smoke2.svg" alt="" id="smoke2">
+                <img src="assets/smoke3.svg" alt="" id="smoke3">
+                <img src="assets/smokebg.svg" alt="" id="smokebg">
+                <div class="halo"></div>
+                <span id="thenumber" v-if="this.step === 11 && this.a">{{ a }}</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>Built by <a href="https://github.com/sagearslan" target="_blank">@sagearslan</a></footer>
+
+    <script>
+        const{createApp:t}=Vue;t({data:()=>({step:1,prev_text:"Back",next_text:"Ok",input:"",playagain:!1}),methods:{prev(){this.step>1&&this.step--},next(){11===this.step?this.reset():this.step++},reset(){this.step=1,this.playagain=!1,this.input=""}},computed:{message(){switch(this.step){case 1:return this.next_text="Let's play","I'm Madame Mahala.<br>Do you want to see something... <i>spectacular</i>?";case 2:return this.next_text="Ok, got it","Excellent... You will need a pen and paper.";case 3:return this.next_text="Ok, it's written down","Write down a random 4 or 5 digit number like 1234.";case 4:return this.next_text="Ok, done","Very good. Now, jumble up the numbers (like 3214), and<br>write it below your first number.";case 5:return this.next_text="Ok","Let's make things interesting...";case 6:return this.next_text="Ok, done","Subtract the smaller number from the larger number.<br>Calculator is your friend.";case 7:return this.next_text="Ok, done","Write down the answer, and circle a random digit that's not a zero<br>(because it's already a circle).";case 8:return this.next_text="Yeah right","It's magic time...<br>I will use my powers to guess what number you circled.";case 9:return this.next_text="Next","Tell me all the numbers you <u>didn't</u> circle.";case 10:return this.next_text="Next",this.playagain=!1,setTimeout(()=>this.step=11,5e3),setTimeout(()=>this.playagain=!0,9e3),"Look into my crystal ball and think of the number you circled...";case 11:this.next_text="Play again";let t=["The crystal ball does not lie.","Impressed?",];return t[Math.floor(Math.random()*t.length)]}},a(){let t=this.input.replace(/\D/g,"");if(t){let e=0;for(let r=0;r<t.length;r++)e+=t[r];return 9-e%9}return 0}}}).mount("#app");
+    </script>
+</body>
+</html>

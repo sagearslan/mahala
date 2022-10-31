@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="478px" height="50px" viewBox="0 0 478 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-1.2%" y="-1.7%" width="102.3%" height="103.3%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.568627451   0 0 0 0 0.490196078   0 0 0 0 0.517647059  0 0 0 1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-470.000000, -621.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="FORTUNE-TELLER1" filter="url(#filter-1)">
+                <g id="Group" transform="translate(95.817143, 484.205714)">
+                    <path d="M375.954286,180.443429 L848.676571,180.443429 C848.676571,180.443429 815.030857,124.854857 786.724571,142.409143 C758.345143,159.963429 742.912,171.227429 715.776,159.744 C688.713143,148.187429 684.982857,149.284571 659.894857,159.744 C634.733714,170.203429 375.954286,180.443429 375.954286,180.443429 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
