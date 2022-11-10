@@ -33,7 +33,7 @@ createApp({
             switch(this.step){
                 case 1:
                     this.next_text = "Let's play";
-                    return "I'm Madame Mahala.<br>Do you want to see something... <i>spectacular</i>?"; break;
+                    return "Do you want to see something... <i>spectacular</i>?"; break;
                 case 2:
                     this.next_text = "Ok, got it";
                     return "Excellent... You will need a pen and paper."; break;
